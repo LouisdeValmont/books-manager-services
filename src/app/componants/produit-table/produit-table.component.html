@@ -1,0 +1,19 @@
+<table class="table">
+  <thead class="table-dark">
+  <tr>
+    <th>ID</th>
+    <th>Nom du produit</th>
+    <th>Status</th>
+    <th>Changer le status</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr app-produit-table-line
+      *ngFor="let produit of produits"
+      [id]="produit.id"
+      [nom]="produit.nom"
+      [status]="produit.status"
+  >
+  </tr>
+  </tbody>
+</table>

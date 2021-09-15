@@ -1,0 +1,16 @@
+<div class="text-center my-3">
+  <button
+    class="btn btn-dark me-2 text-uppercase"
+    (click)="onClickSwitchAllStatus('pris')"
+  >pris</button>
+  <button
+    class="btn btn-dark text-uppercase"
+    (click)="onClickSwitchAllStatus('libre')"
+  >libre</button>
+</div>
+
+  <app-produit-table
+    [produits] = "produits"
+  >
+
+  </app-produit-table>

@@ -1,0 +1,14 @@
+<td>{{id}}</td>
+<td>{{nom}}</td>
+<td>{{status}}</td>
+<td>
+  <button
+    class="btn btn-outline-dark mx-2"
+    (click)="onClickSwitchStatus()"
+  >Basculer en {{nextStatus | uppercase}}</button>
+
+  <button
+    [routerLink]="['/produits', id]"
+    class="btn btn-primary"
+  >Detail</button>
+</td>
