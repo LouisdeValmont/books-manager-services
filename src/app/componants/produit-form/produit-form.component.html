@@ -13,6 +13,9 @@
              class="form-control"
              placeholder="nom"
              [(ngModel)]="produit.nom">
+
+      <app-errors-form [control]="this.produitForm.controls.nom"
+                       controlLabel="'Nom'"></app-errors-form>
     </div>
 
     <div class="mb-3">

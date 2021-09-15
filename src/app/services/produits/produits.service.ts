@@ -93,4 +93,15 @@ export class ProduitsService {
   }
 
 
+  deleteBook(productIdToDelete: number) {
+    const produits = this.produits.getValue();
+
+    for (let [index, product] of produits.entries()) {
+      if (product.id === productIdToDelete) {
+        produits.splice(index, 1);
+        this.produits.next(produits);
+        break;
+      }
+    }
+  }
 }

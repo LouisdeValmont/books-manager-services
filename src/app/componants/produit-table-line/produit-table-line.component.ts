@@ -29,6 +29,10 @@ export class ProduitTableLineComponent implements OnInit, OnChanges {
     this.produitService.switchStatus(this.id, this.nextStatus);
   }
 
+  onClickDeleteProduct() {
+this.produitService.deleteBook(this.id);
+  }
+
   private setNextStatus(){
     if(this.status === 'libre'){
       this.nextStatus = 'pris'

@@ -14,6 +14,11 @@
 
   <button
     [routerLink]="['/produits', id, 'edit']"
-    class="btn btn-success"
+    class="btn btn-success me-2"
   >Editer</button>
+
+  <button
+    (click)="onClickDeleteProduct()"
+    class="btn btn-danger"
+  >Delete</button>
 </td>

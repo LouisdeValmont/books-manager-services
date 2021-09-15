@@ -17,6 +17,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ProduitFormComponent } from './componants/produit-form/produit-form.component';
 import { EditProduitViewComponent } from './views/edit-produit-view/edit-produit-view.component';
 import { NewProduitViewComponent } from './views/new-produit-view/new-produit-view.component';
+import { ErrorsFormComponent } from './componants/errors-form/errors-form.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { NewProduitViewComponent } from './views/new-produit-view/new-produit-vi
     ErrorViewComponent,
     ProduitFormComponent,
     EditProduitViewComponent,
-    NewProduitViewComponent
+    NewProduitViewComponent,
+    ErrorsFormComponent
   ],
   imports: [
     BrowserModule,
