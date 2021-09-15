@@ -13,7 +13,10 @@ import {AuthGuard} from "./guards/auth/auth.guard";
 import { HeaderComponent } from './componants/header/header.component';
 import { SingleProductViewComponent } from './views/single-product-view/single-product-view.component';
 import { ErrorViewComponent } from './views/error-view/error-view.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ProduitFormComponent } from './componants/produit-form/produit-form.component';
+import { EditProduitViewComponent } from './views/edit-produit-view/edit-produit-view.component';
+import { NewProduitViewComponent } from './views/new-produit-view/new-produit-view.component';
 
 
 @NgModule({
@@ -25,12 +28,16 @@ import {FormsModule} from "@angular/forms";
     AuthViewComponent,
     HeaderComponent,
     SingleProductViewComponent,
-    ErrorViewComponent
+    ErrorViewComponent,
+    ProduitFormComponent,
+    EditProduitViewComponent,
+    NewProduitViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ProduitsService,

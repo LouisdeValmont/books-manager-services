@@ -1,0 +1,9 @@
+<app-produit-form
+  *ngIf="produit"
+  title="Edition d'un produit"
+  submitLabel="Editer"
+  [produitToEdit]="produit"
+  (formSubmitted)="AskToEditProduit($event)"
+>
+
+</app-produit-form>

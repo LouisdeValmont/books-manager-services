@@ -21,6 +21,42 @@ export class ProduitsService {
     this.produits = new BehaviorSubject<Array<Produit>>(produitsToPush);
   }
 
+  addProduit(produitToAdd: Produit): Promise<void> {
+
+    return  new Promise<void>(
+      (res, rej)=>{
+
+        setTimeout(()=>{
+          const produits = this.produits.getValue();
+          produits.push(produitToAdd);
+          this.produits.next(produits);
+          res();
+        },500)
+      }
+    )
+  }
+
+  editProduit(editedProduit: Produit): Promise<void>{
+    return new Promise<void>(
+      (res, rej) => {
+
+        setTimeout(() => {
+            const produits = this.produits.getValue();
+
+            for (let [index, produit] of produits.entries()) {
+              if (produit.id === editedProduit.id) {
+                produits[index] = editedProduit;
+                this.produits.next(produits);
+                res();
+                break;
+              }
+            }
+          }
+        )
+      }
+    )
+}
+
   switchAllStatus(newStatus: string) {
     const produitToEdit = this.produits.getValue();
     produitToEdit.forEach(produit=>produit.status = newStatus);
@@ -55,5 +91,6 @@ export class ProduitsService {
     )
 
   }
+
 
 }
